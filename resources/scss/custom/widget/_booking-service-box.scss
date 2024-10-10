@@ -1,0 +1,571 @@
+.booking-service-box{
+    .booking-service-meta{
+        li{
+            position: relative;
+            padding-right: 12px;
+            margin-right: 6px;
+
+            &::after{
+                content: "";
+                width: 6px;
+                height: 6px;
+                background-color: var(--#{$variable-prefix}gray-500);
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+            }
+
+            &:last-child{
+                padding-right: 0;
+                margin-right: 0;
+
+                &::after{
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .service-image{
+        position: relative;
+        width: 100%;
+
+        img{
+            height: 240px;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .rating-box{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+
+    .readmore-text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+
+        &.active{
+            text-overflow: initial;
+            -webkit-line-clamp: initial;
+        }
+    }
+
+    .readmore-btn{
+        font-size: 14px;
+    }
+}
+
+.about-provider-box {
+    .provider-image-container {
+        width: 180px;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+@media (max-width: 400px){
+    .booking-service-box{
+        .service-image{
+            img{
+                height: 180px;
+            }
+        }
+    } 
+}
+
+
+// service detail page styles
+
+.service-detail-main-wrapper
+{
+    padding-top: 32px;
+    max-width: 1200px;
+}
+.custom-breadcrums
+{
+    align-items: center;
+    li
+    {
+        a
+        {
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            color: #686868;
+        }
+        &.active a
+        {
+            font-weight: 600;
+        }    
+    }
+    svg
+    {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+}
+
+.service-detail-metadata
+{
+    .service-metadata-media-slider
+    {
+        position: sticky;
+        top: 0;
+    }
+    .service-metadata-media
+    {
+        // margin-top: 40px;
+        margin-bottom: 40px;
+    }
+}
+
+.service-metadata-info
+{
+    span.service-category {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 16px;
+        width: fit-content;
+        height: 30px;
+        background: #FDEEEE;
+        border-radius: 25px;
+        margin-bottom: 10px;
+        span{
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+            color: #000000;
+        }
+    }
+    .service-detail-title
+    {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 27px;
+        color: #000000;
+    }
+    .service_detail-description
+    {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #686868;
+        margin-bottom: 34px;
+        margin-top: 10px;
+    }
+    .service_duration_location_section
+    {
+        margin-bottom: 34px !important;
+    }
+    .service_duration_location_section .duration-text, .service_duration_location_section .location-text
+    {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        color: #202020;
+        padding-left: 4px;
+    }
+    .service_duration_location_section .duration-text
+    {
+        margin-right: 16px;
+    }
+    .service_price_rating_section .price-text, .service_price_rating_section .session-text
+    {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 26px;
+        color: #202020;
+    }
+    .service_price_rating_section .session-text
+    {
+        font-family: 'Open Sans';
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 21px;
+    }
+    .service_price_rating_section .star-rating-count
+    {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 16px;
+        line-height: 19px;
+        color: #202020;
+    }
+    .rateit-font
+    {
+      font-size: 16px;
+      line-height: 13px;
+    }
+    .rateit .rateit-selected
+    {
+      color: #ffcb12;
+    }
+    .service-continue-button-section
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 16px 40px;
+        width: 232px;
+        height: 43px;
+        background: #202020;
+        border-radius: 12px;
+        margin-top: 44px;
+        margin-bottom: 24px;
+    }
+    .service-continue-button-section a
+    {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        color: #FFFFFF;
+    } 
+    .section-divider
+    {
+        width: 100%;
+        height: 0px;
+        border: 1px solid #E5E5E5;
+        margin-top: 32px;   
+        margin-bottom: 32px;   
+    }
+
+    // availability section
+    .availability-days-section
+    {
+        .availability-days-title
+        {
+            margin-bottom: 8px;
+            span
+            {
+                font-family: 'Rubik';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 21px;
+                color: #000000;
+                padding-left: 10px;
+            }
+        }
+        .availability-days-description
+        {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: #686868;
+            margin-bottom: 21px;
+        }
+        .day-name
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 16px;
+            height: 31px;
+            background: #F5F5F5;
+            border-radius: 8px;
+            &:hover
+            {
+                color: #F5F5F5;
+                background-color: #202020;
+                span
+                {
+                    color: #F5F5F5;    
+                }
+            }
+            span
+            {
+                font-family: 'Rubik';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                color: #202020;
+                border: transparent;
+                padding: 0;
+                &:hover
+                {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+
+    // community reviews section
+    .service-reviews-section
+    {
+        .service-reviews-section-title
+        {
+            margin-bottom: 10px;
+            span
+            {
+                font-family: 'Rubik';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 21px;
+                color: #000000;
+                padding-left: 10px;
+            }
+        }
+        .reviews-details
+        {
+            margin-bottom: 26px;
+            .reviews-details-left, .reviews-details-right
+            {
+                margin-top: 8px;
+                margin-bottom: 8px;    
+                .inner-left-side-count
+                {
+                    font-family: 'Rubik';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 22px;
+                    line-height: 26px;
+                    color: #202020;
+                    margin-right: 8px;
+                }
+                .inner-right-side-section-title
+                {
+                    font-family: 'Rubik';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: #202020;
+                }
+                .inner-right-side-section-description {
+                    font-family: 'Open Sans';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 19px;
+                    color: #686868;
+                    margin-top: 3px;
+                }
+            }
+            .reviews-details-left .inner-right-side-section-title
+            {
+                line-height: 0px;
+            }
+            .section-horizontal-divider
+            {
+                width: 30px;
+                height: 0px;
+                border: 1px solid #E5E5E5;
+                transform: rotate(-90deg);
+            }
+        }
+        .comments-container
+        {
+            .comments-count-title
+            {
+                p
+                {
+                    font-family: 'Rubik';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: #000000;
+                }
+            }
+            .view-all-comments-link
+            {
+                font-family: 'Rubik';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 17px;
+                color: #000000;
+            }
+            .comment
+            {
+                margin-bottom: 18px !important;
+            }
+            .comment-box
+            {
+                img
+                {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50px;
+                    object-fit: cover;
+                    margin-right: 12px;
+                }
+                .comments-user-name
+                {
+                    font-family: 'Rubik';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #000000;
+                    margin-bottom: 4px;
+                }
+                .comments-paragraph
+                {
+                    font-family: 'Open Sans';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 19px;
+                    color: #686868;
+                }
+            }
+        }
+    }
+
+    // provider detail section
+
+    .service-provider-detail-section
+    {
+        .service-provider-detail-section-title
+        {
+            margin-bottom: 24px;
+            span
+            {
+                font-family: 'Rubik';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 21px;
+                color: #000000;
+                padding-left: 10px;
+            }
+        }
+        .provider-detail-box
+        {
+            img
+            {
+                width: 29px;
+                height: 33.53px;
+                margin-bottom: 12px;
+                object-fit: cover;
+            }
+            .provider-name
+            {
+                line-height: initial;
+                a
+                {
+                    font-family: 'Rubik';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #000000;
+                    margin-bottom: 2px;
+                }       
+            }
+            .provider-speciality
+            {
+                font-family: 'Rubik';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 17px;
+                color: #000000;
+                margin-bottom: 10px;
+            } 
+            .provider-description
+            {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 19px;
+                color: #686868;
+                margin-bottom: 5px;
+            }
+        }
+        .provider-metadata
+        {
+            .provider-metadata-box
+            {
+                width: 112px;
+                margin-right: 44px;
+                margin-top: 5px;
+                svg
+                {
+                    margin-bottom: 8px
+                }
+                .provider-metadata-box-title
+                {
+                    font-family: 'Open Sans';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 19px;
+                    color: #686868;
+                    margin-bottom: 8px
+                }
+                .provider-metadata-box-description
+                {
+                    font-family: 'Open Sans';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 19px;
+                    color: #000000;
+                }
+            }
+        }
+
+    }
+
+    // related service section
+
+}
+.related-service-section
+{
+    margin-top: 80px;
+    // margin-bottom: 140px;
+    .related-service-section-title, .view-more-link
+    {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21px;
+        color: #000000;
+        margin-bottom: 16px;
+    }
+    .related-services-swiper .swiper.swiper-initialized 
+        {
+        margin-bottom: 120px;
+        }
+
+}
